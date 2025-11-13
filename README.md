@@ -50,7 +50,7 @@ spring.datasource.password=
 
 Run the application
 
-mvn spring-boot:run
+`mvn spring-boot:run`
 
 
 Access API via:
@@ -63,7 +63,7 @@ Access API via:
 ➕ POST /books
 
 Add a new book or increase total copies if the title already exists.
-
+```
 Example Request:
 
 {
@@ -74,7 +74,7 @@ Example Request:
   "totalCopies": 7,
   "availableCopies": 5
 }
-
+```
 
 Sample Endpoints:
 
@@ -164,13 +164,13 @@ Example:
 
 POST http://localhost:8080/records/return/?borrowerId={borrowerId}&bookId={bookId}
 
-📂 GET /records/active
+`📂 GET /records/active`
 
 List all currently borrowed books with borrower names and due dates.
 
 GET http://localhost:8080/records/active/
 
-🧮 Data Model Overview
+`🧮 Data Model Overview`
 
 Entities:
 
@@ -182,7 +182,7 @@ BorrowRecord
 
 Each entity is linked via JPA relationships with soft-deletion and data consistency validations.
 
-🧑‍💻 Developer Notes
+`🧑‍💻 Developer Notes`
 
 Use @JsonManagedReference / @JsonBackReference to prevent infinite recursion in entity serialization.
 
