@@ -3,7 +3,7 @@
 
 A Spring Boot REST API to manage books, borrowers, and the borrowing lifecycle — featuring soft deletion, pagination, and realistic validations.
 
-🚀 Features
+`🚀 Features`
 
 Add, update, and soft-delete books
 
@@ -17,7 +17,7 @@ Overdue borrower tracking
 
 Automatic fine calculation
 
-🧩 Tech Stack
+`🧩 Tech Stack`
 
 Java 8
 
@@ -30,13 +30,13 @@ H2 / MySQL (configurable)
 Spring Web (REST API)
 
 
-⚙️ Setup Instructions
+`⚙️ Setup Instructions`
 
 Clone the repository
 
-git clone https://github.com/your-username/library-management-system.git
+git clone https://github.com/sreenijanarayanaa/LibraryManagementSystem
 
-cd library-management-system
+cd LibraryManagementSystem
 
 
 Configure application.properties
