@@ -21,7 +21,7 @@ public class BookService {
 	@Autowired
 	BookRepository bookRepository;
 
-	public Book addOrUpdateBook(Book book) {
+	public Book addBook(Book book) {
 		return bookRepository.save(book);
 
 	}
@@ -72,12 +72,9 @@ public class BookService {
 
 	}
 
-	public void deleteBook(int id) {
-		// TODO Auto-generated method stub
+	
 
-	}
-
-	public Book softDeleteBook(String id) {
+	public Book DeleteBook(String id) {
 		Book book = bookRepository.findById(id).orElseThrow(()->new BookNotFoundException("Book with id: "+id+" doesn't exsist"));
 		if(book.getAvailableCopies()!=book.getTotalCopies()) {
 			throw new InvalidOperationException("Cannot delete book with active borrow records");

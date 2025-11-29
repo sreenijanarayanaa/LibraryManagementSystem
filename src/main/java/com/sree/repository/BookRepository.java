@@ -13,11 +13,13 @@ import com.sree.entity.Book;
 @Repository
 public interface BookRepository extends JpaRepository<Book,String>{
 
-	List<Book> findByCategoryAndIsAvailable(String category, boolean available);
-
-	List<Book> findByIsAvailable(boolean available);
-
-	List<Book> findByCategory(String category);
+	/*
+	 * List<Book> findByCategoryAndIsAvailable(String category, boolean available);
+	 * 
+	 * List<Book> findByIsAvailable(boolean available);
+	 * 
+	 * List<Book> findByCategory(String category);
+	 */
 	
 	
 	    Page<Book> findByCategory(String category, Pageable pageable);

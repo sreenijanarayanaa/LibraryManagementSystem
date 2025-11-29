@@ -11,7 +11,6 @@ import com.sree.Exception.BookNotFoundException;
 import com.sree.Exception.BorrowerNotFoundException;
 import com.sree.Exception.InvalidOperationException;
 import com.sree.dto.BorrowerDueDTO;
-import com.sree.dto.BorrowerDueInfo;
 import com.sree.entity.Book;
 import com.sree.entity.BorrowRecord;
 import com.sree.entity.Borrower;
@@ -78,11 +77,11 @@ public class BorrowRecordService {
                 .filter(r -> r.getBorrower().getId().equals(borrowerId)
                         && r.getBook().getId().equals(bookId))
                 .findFirst()
-                .orElseThrow(() -> new InvalidOperationException("No active borrow record found"));
+                .orElseThrow(() -> new InvalidOperationException("borrow record not found"));
 
         found.setReturnDate(LocalDate.now());
 
-        // compute fine
+        // computng fine
         if (found.getReturnDate().isAfter(found.getDueDate())) {
             long daysLate = ChronoUnit.DAYS.between(found.getDueDate(), found.getReturnDate());
             double finePerDay = 10.0;

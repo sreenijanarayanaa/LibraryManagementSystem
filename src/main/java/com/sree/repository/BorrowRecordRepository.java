@@ -1,6 +1,5 @@
 package com.sree.repository;
 
-import java.util.UUID;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -9,10 +8,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.sree.dto.BorrowerDueDTO;
-import com.sree.dto.BorrowerDueInfo;
+
 import com.sree.entity.BorrowRecord;
 import com.sree.entity.Borrower;
-import com.sree.dto.BorrowerDueInfo;
+
 
 @Repository
 public interface BorrowRecordRepository extends JpaRepository<BorrowRecord, String> {

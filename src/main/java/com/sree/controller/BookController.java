@@ -25,19 +25,15 @@ import com.sree.service.BookService;
 @RequestMapping("/books")
 public class BookController {
 
-	/*
-	 * Book Management APIs ● ● ● ● DELETE /books/{id} – Soft delete only if no
-	 * active borrow record.
-	 * 
-	 */
+
 	@Autowired
 	BookService bookService;
 
 	// POST /books – Add a new book or increase total copies if title already
 	// exists.
 	@PostMapping("/")
-	public ResponseEntity<Book> addOrUpdateBook(@RequestBody Book book) {
-		return ResponseEntity.ok(bookService.addOrUpdateBook(book));
+	public ResponseEntity<Book> addBook(@RequestBody Book book) {
+		return ResponseEntity.ok(bookService.addBook(book));
 	}
 
 	/*
@@ -78,7 +74,7 @@ public class BookController {
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Book> deleteBook(@PathVariable String id) {
 
-		Book deletedBook = bookService.softDeleteBook(id);
+		Book deletedBook = bookService.DeleteBook(id);
 
 		return ResponseEntity.ok(deletedBook);
 	}

@@ -19,7 +19,6 @@ import jakarta.persistence.Table;
 @Table(name = "books")
 public class Book {
 	
-	
 	@Id
 	private String id;
 	private String title;
