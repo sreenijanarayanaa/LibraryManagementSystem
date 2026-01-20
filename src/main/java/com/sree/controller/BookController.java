@@ -73,11 +73,10 @@ public class BookController {
 
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Book> deleteBook(@PathVariable String id) {
-
 		Book deletedBook = bookService.DeleteBook(id);
-
 		return ResponseEntity.ok(deletedBook);
 	}
+	//line1
 
 
 	//line2
