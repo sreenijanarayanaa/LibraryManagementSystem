@@ -76,8 +76,5 @@ public class BookController {
 		Book deletedBook = bookService.DeleteBook(id);
 		return ResponseEntity.ok(deletedBook);
 	}
-	//line1
-	//line2
-	//line 3
 	
 }
